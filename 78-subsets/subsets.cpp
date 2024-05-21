@@ -12,8 +12,20 @@ public:
     }
 
     vector<vector<int>> subsets(vector<int>& nums) {
-        vector<vector<int>>ans;
-        vector<int> path;
-        return helper(nums,0, path, ans);          // backtracking
+        // vector<vector<int>>ans;
+        // vector<int> path;
+        // return helper(nums,0, path, ans);          // backtracking
+
+
+        vector<vector<int>> result = {{}};           
+        for (int num : nums) {                        // iterative
+            int size = result.size();
+            for (int i = 0; i < size; i++) {
+                vector<int> subset = result[i];
+                subset.push_back(num);
+                result.push_back(subset);
+            }
+        }
+        return result;
     }
 };
