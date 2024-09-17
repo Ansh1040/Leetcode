@@ -20,10 +20,15 @@ public:
         }
         
         // condition needed if empty string allowed
-        // if(tmp != ""){
-        //     um[tmp]++;
-        //     tmp = "";
-        // }
+
+        /*
+        if(tmp != ""){
+            um[tmp]++;
+            tmp = "";
+        }
+        */
+
+
 
         // check unique means single count
         vector<string> ans;
